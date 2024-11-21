@@ -1,0 +1,39 @@
+.form-select{
+    margin: 10px;
+    width: 110px;
+    background: #00ff1a;
+}
+h1{
+    text-align: center;
+    background: #66ff00;
+    border-radius:30;
+    margin:0 10 0 0;
+}
+/* .input-group mb-3{
+    
+} */
+.container1{
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+body{
+    margin: 0;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+.chattext {
+    margin-top:420px;
+    margin-left:10px;
+    width: 380px;
+}

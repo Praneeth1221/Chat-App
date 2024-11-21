@@ -1,17 +1,17 @@
 .form-select{
     margin: 10px;
     width: 110px;
-    background: #00ff1a;
+    border-color: #1aff00;
+   
 }
 h1{
     text-align: center;
     background: #66ff00;
-    border-radius:30;
-    margin:0 10 0 0;
+    border:solid;
+    border-radius:10px;
+    border-color: #596374;
+    margin:10px 10px 0px 10px;
 }
-/* .input-group mb-3{
-    
-} */
 .container1{
     background: #ffffff;
     width: 90%;
@@ -36,4 +36,11 @@ body{
     margin-top:420px;
     margin-left:10px;
     width: 380px;
+}
+.btn{
+    background-color: #000000;
+    color: #ffffff;
+}
+.form-control{
+    border:solid;
 }

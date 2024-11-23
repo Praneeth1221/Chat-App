@@ -46,7 +46,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCkwON5r3odzogXlre6e3A3FZVh_Y92lLM", requestOptions)
+fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyB6IlQdySGYeZHSxEEQLG0N6IT33POM1ts", requestOptions)
   .then((response) => response.json())
   .then((result) =>{
     console.log(result.candidates[0].content.parts[0].text)

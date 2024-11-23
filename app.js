@@ -1,13 +1,62 @@
 const chatList=[];
 
+let user="";
+
+document.getElementById("selectUser").addEventListener("change", function () {
+    user=this.value;
+    console.log(this.value);
+});
+
 function sendMassage(){
     console.log("Send!!");
  let txtUserInput=document.getElementById("txtUserInput").value;
 
- let chatBubble=`<h3>${txtUserInput}</h3>`;
+
+
+ let chatBubble="";
+
+     chatBubble = `<div class="text-end  ms-auto mecard  text-white ">${txtUserInput}</div>`;
+
+
  chatList.push(chatBubble);
  loadchat();
  console.log(chatList);
+
+
+ //--------------------------------------------------------------
+ const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": txtUserInput
+        }
+      ]
+    }
+  ]
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCkwON5r3odzogXlre6e3A3FZVh_Y92lLM", requestOptions)
+  .then((response) => response.json())
+  .then((result) =>{
+    console.log(result.candidates[0].content.parts[0].text)
+    chatBubble=`<div class="text-start bg-secondary text-white">${result.candidates[0].content.parts[0].text}</div>`;
+    chatList.push(chatBubble);
+    loadchat();
+    })
+  
+  .catch((error) => console.error(error));
+ //-------------------------------------------------------------
 }
 function loadchat(){
     document.getElementById("chatBox").innerHTML="";
@@ -16,3 +65,8 @@ function loadchat(){
     })
 
 }
+
+document.getElementById("txtUserInput").value = "";
+
+
+

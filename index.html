@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-
-
-<body>
-
-    <div class="container1">
-    <h1>Chat App</h1>
-
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Select</option>
+  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+  
+  <body>
+    
+    
+    
+    <div class="container">
+      <h1>Chat BOT</h1>
+      
+      <select class="form-select" aria-label="Default select example" id="selectUser">
+        
         <option value="me">Me</option>
         <option value="receiver">Receiver</option>
       </select>
-    <br>
+      <br>
+     
     <div class="container " id="chatBox">
-      <h3 class="text-end">Me : hello</h3>
-      <h3>kamal : hi</h3>
-      <h3 class="text-end">Me : hello</h3>
-      <h3>kamal : hi</h3>
-      <h3 class="text-end">Me : hello</h3>
-      <h3>kamal : hi</h3>
+      <h3 class="text-end"></h3>
+      <h3></h3>
+      <h3 class="text-end"></h3>
+      <h3></h3>
+      <h3 class="text-end"></h3>
+      <h3></h3>
+      <h3 class="text-end"></h3>
+      <h3></h3>
+      <h3 class="text-end"></h3>
+      <h3></h3>
+      <h3 class="text-end"></h3>
+      <h3></h3>
     </div>
-    <div class="input-group mb-3 chattext">
+
+    <div class="input-group mb-3 chattext container" > 
+        
         <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" id="txtUserInput">
         <button class="btn btn-outline-secondary btn" type="button" id="button-addon2" onclick="sendMassage()">Send</button>
+     
       </div>
-   
+      
 </div>
 <script src="app.js"></script>
 </body>
-
 </html>

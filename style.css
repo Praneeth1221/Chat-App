@@ -89,6 +89,7 @@ h1 {
 .text-start.bg-secondary {
     background-color: #6c757d;
     color: #fff;
+    width:fit-content;
 }
 
 
